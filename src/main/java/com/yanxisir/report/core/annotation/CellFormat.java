@@ -1,0 +1,22 @@
+package com.yanxisir.report.core.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * author: yanxi
+ * date : 16/12/5
+ */
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
+public @interface CellFormat {
+    int row() default 1;
+
+    int col() default 1;
+
+    String hyperlink() default "";
+
+    String hyperlinkRef() default "";
+}
